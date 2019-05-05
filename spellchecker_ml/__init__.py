@@ -1,5 +1,5 @@
 __version__ = '0.1'
 
-from .normalization import normalization
+from .spellchecker_ml import spellchecker_ml
 
-__all__ = ["normalization"]
+__all__ = ["spellchecker_ml"]
