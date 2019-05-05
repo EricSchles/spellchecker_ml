@@ -24,7 +24,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=['spellchecker_ml', 'spellchecker_ml.spellchecker'],
+    packages=['spellchecker_ml', 'spellchecker_ml.spellchecker_ml'],
     include_package_data=True,
-    install_requires=['pyspellchecker', 'sklearn'],
+    install_requires=['pyspellchecker', 'scikit-learn', 'hmmlearn', 'autocomplete'],
 )
