@@ -10,8 +10,8 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="spellchecker_ml",
-    version="0.1",
-    description="Testing for models confirming to the scikit-learn api",
+    version="0.1.3",
+    description="Spellchecker that makes use of a hidden markov model",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/EricSchles/spellchecker_ml",
@@ -26,5 +26,5 @@ setup(
     ],
     packages=['spellchecker_ml', 'spellchecker_ml.spellchecker_ml'],
     include_package_data=True,
-    install_requires=['pyspellchecker', 'scikit-learn', 'hmmlearn', 'autocomplete'],
+    install_requires=['pyspellchecker', 'autocomplete'],
 )
