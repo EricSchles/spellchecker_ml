@@ -6,6 +6,7 @@ class SpellCheckerML:
     def __init__(self):
         self.spell_checker = SpellChecker()
         self.autocomplete = autocomplete
+        self.autocomplete.load()
         
     def train(self, text, model_name=''):
         if model_name == '':
