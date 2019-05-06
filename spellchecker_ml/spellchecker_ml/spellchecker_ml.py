@@ -4,7 +4,7 @@ import random
 
 class SpellCheckerML:
     def __init__(self):
-        self._spell_checker = SpellChecker()
+        self.spell_checker = SpellChecker()
         self.autocomplete = autocomplete
         
     def train(self, text, model_name=''):
@@ -15,10 +15,10 @@ class SpellCheckerML:
         self.autocomplete.load()
         
     def correction(self, previous_word, word):
-        if self._spell_checker.known([word]):
+        if self.spell_checker.known([word]):
             return word
         else:
-            spell_checker_candidates = self._spell_checker.candidates(word)
+            spell_checker_candidates = self.spell_checker.candidates(word)
             autocomplete_predictions = self.autocomplete.predict(previous_word, word[0])
             autocomplete_candidates = [elem[0] for elem in autocomplete_predictions]
             best_choices = []
