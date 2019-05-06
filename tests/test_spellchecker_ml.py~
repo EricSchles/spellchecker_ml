@@ -1,2 +1,0 @@
-from spellchecker_ml.spellchecker_ml import SpellCheckerML
-
