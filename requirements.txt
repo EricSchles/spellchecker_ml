@@ -1,3 +1,4 @@
 pyspellchecker
 sklearn
 pytest
+keras-bert
