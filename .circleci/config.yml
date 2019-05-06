@@ -46,12 +46,6 @@ jobs:
             . venv/bin/activate
             python -m pip install pytest --user
       - run:
-          name: Install spacy dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            python -m spacy download en_core_web_sm
-      - run:
           name: Install library
           command: |
             python3 -m venv venv
@@ -67,11 +61,11 @@ jobs:
           command: |
             . venv/bin/activate
             python -m pip install codecov pytest-cov 
-            cd tests && pytest --cov-report xml --cov=text_processing ./*
+            cd tests && pytest --cov-report xml --cov=spellchecker_ml ./*
       - run: 
           name: run codecov
           command: |
-            curl -s https://codecov.io/bash | bash -s - -t 90e48af9-90e4-4e06-81ee-7b1a6cb24746        
+            curl -s https://codecov.io/bash | bash -s - -t 8c2a25a1-872f-4856-a967-b1f57b6e186c        
       - store_artifacts:
           path: ./tests/htmlcov
           destination: ./tests/htmlcov
