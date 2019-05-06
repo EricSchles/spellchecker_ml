@@ -33,4 +33,4 @@ class SpellCheckerML:
                 best_choices = sorted(best_choices, key=lambda t:t[1])
                 return list(best_choices[-1])[0]
             else:
-                return random.choice(spell_checker_candidates)
+                return random.choice(list(spell_checker_candidates))
